@@ -43,7 +43,7 @@ package XML::Easy::Content;
 use warnings;
 use strict;
 
-our $VERSION = "0.011";
+our $VERSION = "0.011_001";
 
 eval { local $SIG{__DIE__};
 	require XSLoader;
