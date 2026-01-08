@@ -11,7 +11,6 @@ lib/XML/Easy/Text.pm
 lib/XML/Easy/Transform.pod
 MANIFEST			This list of files
 README
-SIGNATURE
 t/classify.t
 t/classify_pp.t
 t/DataSets.pm
