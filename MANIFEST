@@ -35,3 +35,5 @@ t/version_synch.t
 t/write.data
 t/write.t
 t/write_pp.t
+META.yml
+META.json
