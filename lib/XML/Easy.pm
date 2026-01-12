@@ -40,6 +40,13 @@ The interfaces here, too, are functional in nature.
 
 There are other modules for some ancillary aspects of XML processing.
 
+=head2 Minimum Perl Version
+
+While the code in this library's modules was originally written to accommodate
+perl-5.8, its prerequisites are in large part no longer working on that
+version of F<perl>.  So as of XML-Easy-0.012 we will set perl-5.10.1 as our
+recommended minimum Perl version.
+
 =head1 MODULES
 
 The modules in the L<XML::Easy> distribution are:
