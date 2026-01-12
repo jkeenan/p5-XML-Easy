@@ -51,7 +51,7 @@ handle XS modules.
 
 package XML::Easy::Text;
 
-{ use 5.008; }
+{ use 5.010001; }
 use warnings;
 use strict;
 

@@ -120,7 +120,7 @@ and L<XML::Easy::Content> nodes.
 
 package XML::Easy;
 
-{ use 5.008; }
+{ use 5.010001; }
 use warnings;
 use strict;
 

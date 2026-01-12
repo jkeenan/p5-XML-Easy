@@ -50,7 +50,7 @@ of an expected type.  The functions come in matched pairs.
 
 package XML::Easy::Classify;
 
-{ use 5.008; }
+{ use 5.010001; }
 use warnings;
 use strict;
 
