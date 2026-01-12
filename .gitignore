@@ -13,3 +13,4 @@
 /lib/XML/Easy.o
 MANIFEST.bak
 pm_to_blib
+/cover_db
