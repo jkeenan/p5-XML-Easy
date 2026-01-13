@@ -13,6 +13,11 @@ my %WriteMakefileArgs = (
     ABSTRACT            => 'XML processing with a clean interface',
     INSTALLDIRS         => ($] < 5.011 ? 'perl' : 'site'),
     MIN_PERL_VERSION    => '5.10.1',
+    test                => {
+        TESTS => ($ENV{PERL_AUTHOR_TESTING}
+            ? "t/*.t xt/*.t"
+            : "t/*.t")
+    },
     CONFIGURE_REQUIRES => {
         'ExtUtils::MakeMaker' => 0,
     },

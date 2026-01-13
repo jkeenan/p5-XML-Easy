@@ -23,9 +23,6 @@ t/node_basics.t
 t/node_basics_pp.t
 t/node_object.t
 t/node_object_pp.t
-t/pod_cvg.t
-t/pod_cvg_pp.t
-t/pod_syn.t
 t/read.data
 t/read.t
 t/read_pp.t
@@ -35,3 +32,6 @@ t/version_synch.t
 t/write.data
 t/write.t
 t/write_pp.t
+xt/pod_cvg.t
+xt/pod_cvg_pp.t
+xt/pod_syn.t
