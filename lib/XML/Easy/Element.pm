@@ -46,7 +46,7 @@ L<XML::Easy::NodeBasics> than using the methods of this class.
 
 package XML::Easy::Element;
 
-{ use 5.008; }
+{ use 5.010001; }
 use warnings;
 use strict;
 

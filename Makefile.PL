@@ -12,7 +12,7 @@ my %WriteMakefileArgs = (
     AUTHOR              => 'James E Keenan (jkeenan@cpan.org)',
     ABSTRACT            => 'XML processing with a clean interface',
     INSTALLDIRS         => ($] < 5.011 ? 'perl' : 'site'),
-    MIN_PERL_VERSION    => '5.008',
+    MIN_PERL_VERSION    => '5.10.1',
     CONFIGURE_REQUIRES => {
         'ExtUtils::MakeMaker' => 0,
     },
