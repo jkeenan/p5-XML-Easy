@@ -155,7 +155,11 @@ L<http://www.w3.org/TR/REC-xml/>
 
 =head1 AUTHOR
 
-Andrew Main (Zefram) <zefram@fysh.org>
+Andrew Main (Zefram) <zefram@fysh.org> (deceased March 10 2025)
+
+=head2 Maintainer
+
+James E Keenan (jkeenan@cpan.org), beginning with version 0.012
 
 =head1 COPYRIGHT
 
