@@ -23,6 +23,9 @@ jobs:
     name: Perl ${{ matrix.perl-version }}
     steps:
       - uses: actions/checkout@v6
+      - name: Show Perl Version
+        run: |
+          perl -V
       - name: Regular tests
         run: |
             cpanm --installdeps --notest .
@@ -59,7 +62,7 @@ jobs:
 
     - name: Show Perl Version
       run: |
-        perl -v
+        perl -V
 
     - name: Install Modules
       run: |
@@ -79,6 +82,5 @@ jobs:
         perl Makefile.PL
         gmake
         gmake test
-
 
 
