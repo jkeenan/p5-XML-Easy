@@ -131,7 +131,7 @@ package XML::Easy;
 use warnings;
 use strict;
 
-our $VERSION = "0.011_001";
+our $VERSION = "0.012";
 
 use parent "Exporter";
 our @EXPORT_OK = qw(

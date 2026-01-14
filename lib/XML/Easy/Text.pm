@@ -58,7 +58,7 @@ use strict;
 use XML::Easy::Content 0.007 ();
 use XML::Easy::Element 0.007 ();
 
-our $VERSION = "0.011_001";
+our $VERSION = "0.012";
 
 use parent "Exporter";
 our @EXPORT_OK = qw(
