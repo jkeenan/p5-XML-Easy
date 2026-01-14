@@ -66,11 +66,19 @@ jobs:
         cpanm -v
         cpanm --installdeps --notest .
 
-    - name: Run tests
+    - name: Run tests on Linux and macOS
       run: |
+        if: ${{ matrix.runner != 'windows-latest' }}
         perl Makefile.PL
         make
         make test
+
+    - name: Run tests on Windows
+      run: |
+        if: ${{ matrix.runner == 'windows-latest' }}
+        perl Makefile.PL
+        gmake
+        gmake test
 
 
 
