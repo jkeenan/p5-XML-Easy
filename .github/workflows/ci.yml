@@ -30,3 +30,47 @@ jobs:
             make
             make test
 
+  native:
+    strategy:
+      fail-fast: false
+      matrix:
+        runner:
+          - ubuntu-latest
+          - macos-latest
+          - windows-latest
+        perl:
+          - '5.30'
+          - '5.42'
+        #exclude:
+        #  - runner: windows-latest
+        #    perl: '5.40'
+
+    runs-on: ${{matrix.runner}}
+    name: OS ${{matrix.runner}} Perl ${{matrix.perl}}
+
+    steps:
+    - uses: actions/checkout@v6
+
+    - name: Set up perl
+      uses: shogo82148/actions-setup-perl@v1
+      with:
+          perl-version: ${{ matrix.perl }}
+          distribution: ${{ ( matrix.runner == 'windows-latest' && 'strawberry' ) || 'default' }}
+
+    - name: Show Perl Version
+      run: |
+        perl -v
+
+    - name: Install Modules
+      run: |
+        cpanm -v
+        cpanm --installdeps --notest .
+
+    - name: Run tests
+      run: |
+        perl Makefile.PL
+        make
+        make test
+
+
+
