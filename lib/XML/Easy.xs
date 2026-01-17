@@ -44,6 +44,10 @@ static SV *empty_contentobject;
 	(!sv_is_glob(sv) && !sv_is_regexp(sv) && \
 	 (SvFLAGS(sv) & (SVf_IOK|SVf_NOK|SVf_POK|SVp_IOK|SVp_NOK|SVp_POK)))
 
+#ifndef uvchr_to_utf8_flags
+#define uvchr_to_utf8_flags(d, uv, flags) uvuni_to_utf8_flags(d, uv, flags);
+#endif
+
 /* exceptions */
 
 #define throw_utf8_error() croak("broken internal UTF-8 encoding\n")
@@ -1145,7 +1149,7 @@ static U8 *THX_parse_chars(pTHX_ U8 *p, SV *value, U8 endc, U32 flags)
 				vlen = SvCUR(value);
 				vstart = (U8*)SvGROW(value, vlen+4+1);
 				voldend = vstart + vlen;
-				vnewend = uvuni_to_utf8_flags(voldend, val,
+				vnewend = uvchr_to_utf8_flags(voldend, val,
 						UNICODE_ALLOW_ANY);
 				*vnewend = 0;
 				SvCUR_set(value, vnewend - vstart);
