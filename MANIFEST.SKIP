@@ -138,4 +138,6 @@ nytprof.out
 ^README.md
 ^.README.pod
 \.appveyor.yml
-
+^Easy.bs
+^Easy.c
+^Easy.o
